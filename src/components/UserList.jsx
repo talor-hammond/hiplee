@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from 'react'
 
+// Redux; actions:
+import { connect } from 'react-redux'
+
 class UserList extends Component {
     constructor() {
         super()
@@ -11,7 +14,6 @@ class UserList extends Component {
 
     render() {
         const { users } = this.state
-        console.log(users)
 
         return (
             <Fragment>
@@ -27,4 +29,4 @@ class UserList extends Component {
     }
 }
 
-export default UserList
+export default connect()(UserList)
