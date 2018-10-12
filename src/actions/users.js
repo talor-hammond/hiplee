@@ -5,9 +5,10 @@ import request from 'superagent'
 const url = 'https://reqres.in/api/users'
 
 // String constants:
-export const FETCH_USERS = 'FETCH_USERS'
 export const RECEIVE_USERS = 'RECEIVE_USERS'
+export const RECEIVE_USER = 'RECEIVE_USER'
 
+// For fetching all users:
 export function fetchUsers() {
     return dispatch => {
         return request
@@ -27,5 +28,31 @@ function receiveUsers(users) {
     return {
         type: RECEIVE_USERS,
         users
+    }
+}
+
+
+// For fetching a particular user by an id:
+export function fetchUserById(id) {
+    return dispatch => {
+        return request
+            .get(`${url}/${id}`)
+            .then(res => {
+                const user = res.body.data
+
+                dispatch(receiveUser(user))
+            })
+            .catch(err => {
+                if (err) console.log(err)
+            })
+    }
+}
+
+function receiveUser(user) {
+    console.log(`user being fed back into state: ${user}`)
+
+    return {
+        type: RECEIVE_USER,
+        user
     }
 }
