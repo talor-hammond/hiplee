@@ -1,12 +1,26 @@
 // Actions:
 import {
-    RECEIVE_USERS
+    RECEIVE_USERS,
+    RECEIVE_USER
 } from '../actions/users'
 
-export default function users(state = [], action) {
+const initialState = {
+    users: [],
+    userSelected: false
+}
+
+export default function users(state = initialState, action) {
     switch (action.type) {
         case RECEIVE_USERS:
-            return [...action.users]
+            return {
+                users: action.users,
+                userSelected: false
+            }
+        case RECEIVE_USER:
+            return {
+                users: user,
+                userSelected: true
+            }
         default:
             return state
     }

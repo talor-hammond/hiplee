@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 // Components:
-import { UserCard } from './UserCard'
+import UserCard from './UserCard'
 
 class UserList extends Component {
     render() {
@@ -13,12 +13,13 @@ class UserList extends Component {
         return (
             <div className="card-container">
                 {
-                    users.map(user => {
+                    Array.isArray(users) && users.map(user => { // check to see whether it in an array in state before mapping.
                         return (
-                            <UserCard
-                                key={user.id}
-                                firstName={user.first_name}
-                            />
+                                <UserCard
+                                    key={user.id}
+                                    id={user.id}
+                                    firstName={user.first_name}
+                                />
                         )
                     })
                 }
