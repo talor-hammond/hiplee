@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 
 class UserProfile extends Component {
     render() {
-        console.log(this.props)
+        const { user, userSelected } = this.props.user
+        console.log(user, userSelected)
 
         return (
             // TODO: Container for user profile:
