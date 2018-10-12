@@ -7,6 +7,8 @@ class App extends Component {
         <div className="button-container">
           <button className="btn btn-primary">Fetch users</button>
         </div>
+
+        <h2 className="h2">User list:</h2>
       </div>
     );
   }
