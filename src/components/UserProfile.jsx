@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 
 import { connect } from 'react-redux'
 
@@ -8,11 +8,7 @@ class UserProfile extends Component {
 
         return (
             // TODO: Container for user profile:
-            <Fragment>
-                        <Fragment>
-                            <h3>hello</h3>
-                        </Fragment>
-            </Fragment>
+            <h3>hello</h3>
         )
     }
 }
