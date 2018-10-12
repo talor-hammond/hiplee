@@ -1,6 +1,8 @@
 import React from 'react'
 
 export const UserCard = (props) => {
+    console.log(props)
+    
     return (
         <div className="card">
             <div className="card-body">

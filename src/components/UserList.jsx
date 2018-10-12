@@ -9,22 +9,17 @@ import { UserCard } from './UserCard'
 class UserList extends Component {
     constructor() {
         super()
-
-        this.state = {
-            users: [1, 2, 3, 4]
-        }
     }
 
     render() {
-        const { users } = this.state
-        console.log(this.props.users)
+        const { users } = this.props
 
         return (
             <div className="card-container">
                 {
-                    users.map((user, i) => {
+                    users.map(user => {
                         return (
-                            <UserCard key={i} /> // this needs to render a UserCard component and feed data through props
+                            <UserCard key={user.id} firstName={user.first_name} /> // this needs to render a UserCard component and feed data through props
                         )
                     })
                 }
