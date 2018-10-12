@@ -15,6 +15,7 @@ export function fetchUsers() {
             .then(res => {
                 const users = res.body.data // Just grabbing the user data out of of the res.body obj
 
+                console.log(`Users: ${users}`)
                 dispatch(receiveUsers(users)) // ...then feed the users back into client-side state
             })
             .catch(err => {
@@ -24,6 +25,8 @@ export function fetchUsers() {
 }
 
 function receiveUsers(users) {
+    console.log(`Users being fed back into client: ${users}`)
+
     return {
         type: RECEIVE_USERS,
         users

@@ -17,6 +17,7 @@ class UserList extends Component {
 
     render() {
         const { users } = this.state
+        console.log(this.props.users)
 
         return (
             <div className="card-container">
