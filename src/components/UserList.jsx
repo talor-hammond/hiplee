@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 
 // Redux; actions:
 import { connect } from 'react-redux'
@@ -13,10 +13,6 @@ class UserList extends Component {
         this.state = {
             users: [1, 2, 3, 4]
         }
-    }
-
-    componentDidMount() {
-        const { dispatch } = this.props
     }
 
     render() {

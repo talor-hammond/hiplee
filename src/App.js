@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // Components:
-import { FetchButton } from './components/FetchButton'
+import FetchButton from './components/FetchButton'
 import UserList from './components/UserList'
 
 class App extends Component {
