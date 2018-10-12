@@ -1,15 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 import { connect } from 'react-redux'
 
 class UserProfile extends Component {
     render() {
-        const { user, userSelected } = this.props.user
-        console.log(user, userSelected)
+        const { user: { first_name, last_name, avatar }, userSelected } = this.props.user
 
         return (
-            // TODO: Container for user profile:
-            <h3>hello</h3>
+               userSelected && (
+                    <Fragment>
+                        <h3>{first_name} {last_name}</h3>
+                        <img src={avatar} />
+                    </Fragment>
+               )
         )
     }
 }
