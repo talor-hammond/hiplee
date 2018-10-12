@@ -4,30 +4,22 @@ import { connect } from 'react-redux'
 
 class UserProfile extends Component {
     render() {
-        const { userSelected } = this.props.users
-        const { first_name, last_name, avatar } = this.props.users.users // pulling what we need out of the user obj in state.
-
-        console.log(this.props.users)
+        console.log(this.props)
 
         return (
             // TODO: Container for user profile:
             <Fragment>
-                {
-                    userSelected && ( // container to wrap info; instead of <Fragment></Fragment>
                         <Fragment>
-                            <h3>{first_name} {last_name}</h3>
-                            <img src={avatar} />
+                            <h3>hello</h3>
                         </Fragment>
-                    )
-                }
             </Fragment>
         )
     }
 }
 
-const mapStateToProps = ({ users }) => {
+const mapStateToProps = ({ user }) => {
     return {
-        users
+        user
     }
 }
 
