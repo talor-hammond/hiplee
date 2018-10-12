@@ -12,8 +12,13 @@ class UserList extends Component {
         }
     }
 
+    componentDidMount() {
+        const { dispatch } = this.props
+    }
+
     render() {
         const { users } = this.state
+        console.log(this.props)
 
         return (
             <Fragment>
@@ -29,4 +34,10 @@ class UserList extends Component {
     }
 }
 
-export default connect()(UserList)
+const mapStateToProps = ({ users }) => {
+    return {
+        users
+    }
+}
+
+export default connect(mapStateToProps)(UserList)
