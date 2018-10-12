@@ -3,12 +3,15 @@ import React, { Component, Fragment } from 'react'
 // Redux; actions:
 import { connect } from 'react-redux'
 
+// Components:
+import { UserCard } from './UserCard'
+
 class UserList extends Component {
     constructor() {
         super()
 
         this.state = {
-            users: [1, 2, 3]
+            users: [1, 2, 3, 4]
         }
     }
 
@@ -18,18 +21,17 @@ class UserList extends Component {
 
     render() {
         const { users } = this.state
-        console.log(this.props)
 
         return (
-            <Fragment>
+            <div className="card-container">
                 {
                     users.map((user, i) => {
                         return (
-                            <p key={i}>A user</p> // this needs to render a UserCard component and feed data through props
+                            <UserCard key={i} /> // this needs to render a UserCard component and feed data through props
                         )
                     })
                 }
-            </Fragment>
+            </div>
         )
     }
 }

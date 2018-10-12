@@ -8,3 +8,9 @@
   display: flex;
   justify-content: center;
 }
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
