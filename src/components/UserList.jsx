@@ -7,10 +7,6 @@ import { connect } from 'react-redux'
 import { UserCard } from './UserCard'
 
 class UserList extends Component {
-    constructor() {
-        super()
-    }
-
     render() {
         const { users } = this.props
 
@@ -19,7 +15,10 @@ class UserList extends Component {
                 {
                     users.map(user => {
                         return (
-                            <UserCard key={user.id} firstName={user.first_name} /> // this needs to render a UserCard component and feed data through props
+                            <UserCard
+                                key={user.id}
+                                firstName={user.first_name}
+                            />
                         )
                     })
                 }
