@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // Components:
 import { FetchButton } from './components/FetchButton'
+import UserList from './components/UserList'
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <FetchButton />
 
         <h2 className="h2">User list:</h2>
+        <UserList />
       </div>
     );
   }
