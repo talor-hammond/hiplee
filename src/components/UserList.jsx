@@ -8,7 +8,7 @@ import UserCard from './UserCard'
 
 class UserList extends Component {
     render() {
-        const { users } = this.props
+        const { users } = this.props.users
 
         return (
             <div className="card-container">

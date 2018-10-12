@@ -18,7 +18,7 @@ export default function users(state = initialState, action) {
             }
         case RECEIVE_USER:
             return {
-                users: user,
+                users: action.user,
                 userSelected: true
             }
         default:
