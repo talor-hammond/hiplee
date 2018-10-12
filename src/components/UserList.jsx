@@ -23,6 +23,7 @@ class UserList extends Component {
                         )
                     })
                 }
+                <br/>
             </div>
         )
     }

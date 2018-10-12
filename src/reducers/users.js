@@ -4,6 +4,7 @@ import {
     RECEIVE_USER
 } from '../actions/users'
 
+// TODO: Need a piece of state the tracks a particular selected user.
 const initialState = {
     users: [],
     userSelected: false
